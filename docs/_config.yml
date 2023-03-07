@@ -23,9 +23,10 @@ github_username:  marcus.bendtsen
 
 # Build settings
 markdown: kramdown
-theme: Midnight
+remote_theme: pages-themes/midnight@v0.2.0
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
