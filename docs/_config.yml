@@ -23,7 +23,7 @@ github_username:  marcus.bendtsen
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: midnight
 plugins:
   - jekyll-feed
 
