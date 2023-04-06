@@ -1,0 +1,29 @@
+---
+title: "Queries"
+format:
+ html:
+  page-layout: custom
+---
+
+::: {.panel-tabset}
+## Alcohol
+{{< include query/alcohol.qmd >}}
+
+## Diet
+
+## Physical activity
+
+## Smoking
+
+:::
+
+::: {.panel-tabset}
+## CVD
+{{< include query/cvd.qmd >}}
+
+## Cancer
+
+## Lung
+:::
+
+

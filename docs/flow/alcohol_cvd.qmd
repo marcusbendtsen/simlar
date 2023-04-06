@@ -1,0 +1,22 @@
+
+
+```{mermaid}
+flowchart TD
+
+ search_db("Records identified from:<br /> Databases<br />2010")
+ search_rg("Records identified from:<br /> Registries<br />2010")
+ 
+ screened("Records screened after duplicates removed")
+ fulltext("Records assessed for eligability")
+ included("Studies included in review")
+ excluded("Records excluded")
+
+ search_db --> screened
+ search_rg --> screened
+ screened --> fulltext
+ fulltext --> included
+ fulltext --> excluded
+
+
+ ```
+
