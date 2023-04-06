@@ -1,33 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "docs",
-    "section": "",
-    "text": "AlcoholDietPhysical activitySmoking\n\n\n(alcoh*[Title/Abstract] OR test)"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "query.html",
-    "href": "query.html",
-    "title": "Queries",
-    "section": "",
-    "text": "AlcoholDietPhysical activitySmoking\n\n\n(alcoh*[Title/Abstract] OR test)\n\n\n\n\nCVDCancerLung\n\n\n\nCVD query"
-  },
-  {
-    "objectID": "queries.html",
-    "href": "queries.html",
-    "title": "Queries",
-    "section": "",
-    "text": "AlcoholDietPhysical activitySmoking\n\n\n(alcoh*[Title/Abstract] OR test)\n\nCVDCancerLung\n\n\n\nCVD query"
-  },
-  {
     "objectID": "query/alcohol.html",
     "href": "query/alcohol.html",
     "title": "SIMLAR",
@@ -42,16 +14,16 @@
     "text": "CVD query"
   },
   {
-    "objectID": "flow.html",
-    "href": "flow.html",
-    "title": "Flowcharts",
+    "objectID": "flow/alcohol_cvd.html",
+    "href": "flow/alcohol_cvd.html",
+    "title": "SIMLAR",
     "section": "",
     "text": "flowchart TD\n\n search_db(\"Records identified from: Databases2010\")\n search_rg(\"Records identified from: Registries2010\")\n \n screened(\"Records screened after duplicates removed\")\n fulltext(\"Records assessed for eligability\")\n included(\"Studies included in review\")\n excluded(\"Records excluded\")\n\n search_db --> screened\n search_rg --> screened\n screened --> fulltext\n fulltext --> included\n fulltext --> excluded"
   },
   {
-    "objectID": "flow/alcohol_cvd.html",
-    "href": "flow/alcohol_cvd.html",
-    "title": "SIMLAR",
+    "objectID": "flow.html",
+    "href": "flow.html",
+    "title": "Flowcharts",
     "section": "",
     "text": "flowchart TD\n\n search_db(\"Records identified from: Databases2010\")\n search_rg(\"Records identified from: Registries2010\")\n \n screened(\"Records screened after duplicates removed\")\n fulltext(\"Records assessed for eligability\")\n included(\"Studies included in review\")\n excluded(\"Records excluded\")\n\n search_db --> screened\n search_rg --> screened\n screened --> fulltext\n fulltext --> included\n fulltext --> excluded"
   }
