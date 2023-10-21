@@ -16,6 +16,9 @@
       $(function() {
 
 	  $("#pane-alcohol").load("queries/alcohol.txt");
+	  $("#pane-diet").load("queries/diet.txt");
+	  $("#pane-pa").load("queries/pa.txt");
+	  $("#pane-smoking").load("queries/smoking.txt");
 	  
       });
       
@@ -24,7 +27,7 @@
   </head>
 
   <body>
-
+    
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
 	<a class="navbar-brand" href="#">SIMLAR</a>
@@ -52,9 +55,9 @@
 
     <div class="container-fluid">
       
-      <div class="row">
-	
-	<div class="col">
+      <div class="row p-4">
+
+	<div class="col-6">
 
 	  <!-- ######################################### -->
 	  <!-- ######################################### -->
@@ -76,28 +79,33 @@
 	    </li>
 	  </ul>
 
-	  <div class="tab-content" id="tabcontent-behavior">
+	  <div class="tab-content pt-4" id="tabcontent-behavior">
 	    <div class="tab-pane fade show active" id="pane-alcohol" role="tabpanel" tabindex="0">
-	      Alcohol
+	      <div class="spinner-border" role="status">
+		<span class="visually-hidden">Loading...</span>
+	      </div>
 	    </div>
-	    <div class="tab-pane fade active" id="pane-diet" role="tabpanel" tabindex="0">
-	      Diet
+	    <div class="tab-pane fade" id="pane-diet" role="tabpanel" tabindex="0">
+	      <div class="spinner-border" role="status">
+		<span class="visually-hidden">Loading...</span>
+	      </div>
 	    </div>
-	    <div class="tab-pane fade active" id="pane-pa" role="tabpanel" tabindex="0">
-	      PA
+	    <div class="tab-pane fade" id="pane-pa" role="tabpanel" tabindex="0">
+	      <div class="spinner-border" role="status">
+		<span class="visually-hidden">Loading...</span>
+	      </div>
 	    </div>
-	    <div class="tab-pane fade active" id="pane-smoking" role="tabpanel" tabindex="0">
-	      Smoking
+	    <div class="tab-pane fade" id="pane-smoking" role="tabpanel" tabindex="0">
+	      <div class="spinner-border" role="status">
+		<span class="visually-hidden">Loading...</span>
+	      </div>
 	    </div>
 	  </div>
 	  <!-- ## End ################################## -->
 	  
-	</div>
-	
-      </div>
+	</div> <!-- Col -->
 
-      <div class="row">
-	<div class="col">
+	<div class="col-6">
 	  
 	  <!-- ######################################### -->
 	  <!-- ######################################### -->
@@ -112,8 +120,8 @@
 	      <button class="nav-link" id="tab-diet" data-bs-toggle="tab" data-bs-target="#pane-cancer" type="button" role="tab">Cancer</button>
 	    </li>
 	  </ul>
-
-	  <div class="tab-content" id="tabcontent-ncd">
+	  
+	  <div class="tab-content pt-4" id="tabcontent-ncd">
 	    <div class="tab-pane fade show active" id="pane-cvd" role="tabpanel" tabindex="0">
 	      CVD
 	    </div>
@@ -122,14 +130,13 @@
 	    </div>
 	  </div>
 	  <!-- ## End ################################## -->
+	  
+	</div> <!-- Col -->
 
-	</div>
-      </div>
+      </div> <!-- Row -->
 
-    </div>
+    </div> <!-- Container -->
     
-
-
   </body>
 
 </html>
