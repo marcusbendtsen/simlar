@@ -11,6 +11,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
+    <script type="text/javascript">
+
+      $(function() {
+
+	  $("select").on("change", function() {
+
+	      const behavior = $("#select-behavior").val();
+	      const disease = $("#select-disease").val();
+
+	      if (behavior == "0" || disease == "0") {
+		  $("#flow-output").html("");
+		  return;
+	      }
+
+	      const file = "data/" + behavior + "." + disease + ".json";
+	      $.get(file, function(data) {
+
+		  console.log(data);
+		  
+	      });
+
+	      
+	  });
+	  
+      });
+      
+    </script>
+
   </head>
 
   <body>
@@ -22,7 +50,7 @@
 	  <span class="navbar-toggler-icon"></span>
 	</button>
 
-	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	<div class="collapse navbar-collapse">
 	  
 	  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -42,19 +70,46 @@
 
     <div class="container-fluid">
 
-      <div class="row">
+      <div class="row p-4">
+	<div class="col-4">
 
-	<div class="col">
+	  <div class="mb-3">
+	    <label for="select-behavior" class="form-label">Behavior</label>
+	    <select id="select-behavior" class="form-select">
+	      <option value="0" default selected>Select</option>
+	      <option value="alcohol">Alcohol</option>
+	      <option value="diet">Diet</option>
+	      <option value="pa">Physical activity</option>
+	      <option value="smoking">Smoking</option>
+	    </select>
+	  </div>
 
+	  <div class="mb-3">
+	    <label for="select-disease" class="form-label">Disease</label>
+	    <select id="select-disease" class="form-select">
+	      <option value="0" default selected>Select</option>
+	      <option value="cvd">Cardiovascular disease</option>
+	      <option value="cancer">Cancer</option>
+	    </select>
+	  </div>
 
 	  
+	</div> <!-- Col -->
+      </div> <!-- Row -->
+
+      <div class="row">
+	<div class="col">
+
+	  <div id="flow-output">
+	    
+	  </div>
+	  
 	</div>
-	
       </div>
+      
+    </div> <!-- Container -->
 
-    </div>
     
-
 
 
   </body>
